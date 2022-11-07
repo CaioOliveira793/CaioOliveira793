@@ -1,6 +1,7 @@
-## Bio
+Sobre mim:
 
-Desenvolvedor movido por desafios e pelo prazer de construir tecnologias que nos levam mais longe.
+- 🇧🇷 Bahia, Brasil
+- 📚 Autodidata
 
 Busco sempre por produzir um código limpo, resolver problemas de maneira clara e manutenível.
 
