@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/* TODO: import styles in html */
+		@import url(style/token.css);
+		@import url(style/reset.css);
+		@import url(style/typography.css);
+
+		.header_title_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * 1.5);
+		}
+
+		.job_title {
+			font-weight: var(--global-font-weight-bold);
+			text-transform: uppercase;
+		}
+
+		.topic_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * 1);
+		}
+
+		.topic {
+			font-weight: var(--global-font-weight-bold);
+			text-transform: capitalize;
+		}
+
+		.topic_inner_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * 2);
+		}
+
+		.sub_topic_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * 1);
+		}
+
+		.sub_topic {
+			font-weight: var(--global-font-weight-bold);
+		}
+
+		.icon_img {
+			width: 1em;
+			height: 1em;
+			background-color: black;
+		}
+
+
+		body {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		#root {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-template-rows: auto;
+
+			gap: calc(var(--global-spacing-unit) * 4);
+			margin: calc(var(--global-margin-unit) * 4) calc(var(--global-margin-unit) * 6);
+			max-width: 1200px;
+		}
+
+		header {
+			grid-column: span 6;
+
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		aside,
+		main {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * 1.5);
+		}
+
+		aside {
+			grid-column: span 2;
+		}
+
+		main {
+			grid-column: span 4;
+		}
+
+		@media (0px < width < 580px) {
+			#root {
+				gap: calc(var(--global-spacing-unit) * 2);
+			}
+
+			header,
+			aside,
+			main {
+				grid-column: span 6;
+			}
+
+			aside {
+				flex-flow: row wrap;
+			}
+
+			#profile {
+				width: 100%;
+			}
+
+			#personal_info,
+			#contact {
+				width: fit-content;
+			}
+		}
+
+
+		.personal_information_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * .5);
+		}
+
+		.contact_list_container {
+			display: flex;
+			flex-flow: column wrap;
+			gap: calc(var(--global-spacing-unit) * .5);
+		}
+
+		.contact_list_container li {
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: center;
+			gap: var(--global-spacing-unit);
+			width: fit-content;
+		}
+
+
+		.timeline_list {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * .5);
+		}
+
+		.timeline_item {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * 1);
+		}
+
+		.timeline_item_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * .5);
+		}
+
+		.timeline_item_title {
+			font-weight: var(--global-font-weight-bold);
+		}
+
+		.timeline_item_time {
+			text-align: end;
+			color: var(--global-text-disabled-color);
+		}
+
+
+		.project_container {
+			display: flex;
+			flex-flow: column nowrap;
+			gap: calc(var(--global-spacing-unit) * .5);
+		}
+
+
+		.tag_list {
+			display: flex;
+			flex-flow: row wrap;
+			gap: calc(var(--global-spacing-unit) * 1);
+
+			list-style: none;
+		}
+
+		.tag {
+			padding: calc(var(--global-padding-unit) * .5) calc(var(--global-padding-unit) * 1);
+			border-radius: calc(var(--global-border-radius-unit) * 2);
+			background-color: var(--global-bg-emphasis-color);
+		}
+
+	</style>
+
+	<title>Currículo Caio Oliveira</title>
+</head>
+
+<body>
+	<div id="root">
+		<header>
+			<div class="header_title_container">
+				<h1 class="heading3">Caio das Virgens Silva Oliveira</h1>
+				<p class="job_title subtitle1">Desenvolvedor back-end</p>
+			</div>
+		</header>
+
+		<aside>
+			<section id="profile" class="topic_container">
+				<h5 class="topic heading5">Perfil</h5>
+				<p class="body2">
+					Desenvolvedor movido por desafios e pelo prazer de construir tecnologias
+					que nos levam mais longe.
+				</p>
+			</section>
+
+			<section id="personal_info" class="topic_container">
+				<h5 class="topic heading5">Informações pessoais</h5>
+				<div class="personal_information_container">
+					<p class="body2">Nascimento: 23/09/2002</p>
+					<p class="body2">Nascionalidade: Brasileiro</p>
+				</div>
+			</section>
+
+			<!-- TODO: use FontAwesome icons -->
+			<section id="contact" class="topic_container">
+				<h5 class="topic heading5">Contatos</h5>
+				<ul class="contact_list_container">
+					<li class="body2">
+						<img src="image/email.png" alt="icone email" class="icon_img" />
+						<a href="mailto:caio.vsoliveira23@gmail.com">caio.vsoliveira23@gmail.com</a>
+					</li>
+					<li class="body2">
+						<img src="image/tel.png" alt="icone tel" class="icon_img" />
+						<a href="tel:+55 71 98353-2917">+55 71 98353-2917</a>
+					</li>
+					<li class="body2">
+						<img src="image/linkedin.png" alt="icone linkedin" class="icon_img" />
+						<a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+							@ocaiooliveira
+						</a>
+					</li>
+					<li class="body2">
+						<img src="image/github.png" alt="icone github" class="icon_img" />
+						<a href="https://github.com/CaioOliveira793" target="_blank" rel="noopener noreferrer">
+							CaioOliveira793
+						</a>
+					</li>
+					<li class="body2">
+						<img src="image/medium.png" alt="icone medium" class="icon_img" />
+						<a href="https://medium" target="_blank" rel="noopener noreferrer">
+							Medium
+						</a>
+					</li>
+				</ul>
+			</section>
+		</aside>
+
+		<main>
+			<section id="education" class="topic_container">
+				<h5 class="topic heading5">Educação</h5>
+				<ul class="timeline_list">
+					<li class="timeline_item">
+						<strong class="timeline_item_title subtitle2">Ensino médio técnico - CEEP/TIC</strong>
+						<p class="timeline_item_time caption">Jan. de 2017 - Mai. de 2021 &bull; 4 anos 5 meses</p>
+					</li>
+				</ul>
+			</section>
+
+			<section id="experience" class="topic_container">
+				<h5 class="topic heading5">Experiências</h5>
+				<ul class="timeline_list">
+					<li class="timeline_item">
+						<div class="timeline_item_container">
+							<strong class="timeline_item_title subtitle2">Desenvolvedor fullstack - Autônomo</strong>
+							<p class="timeline_item_time caption">Jul. de 2021 - Atual &bull; 1 ano 5 meses</p>
+							<p class="body2">Desenvolvimento e implantação de sistemas de gestão, páginas de vendas e anuncios.</p>
+						</div>
+						<div class="project_container body2">
+							<p>[Projeto: Sistema de Gestão]</p>
+							<p>
+								Neste projeto foi desenvolvido um sistema de gestão de crédito consignado para a empresa LF Promotora.
+								O sistema conta desde a entrada de colaboradores a geração de relatórios de contratos.
+							</p>
+							<p>
+								Tecnologias utilizadas: Possui o backend em NodeJS, com alguns serviços em Rust e React JS no frontend.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section id="skill" class="topic_container">
+				<h5 class="topic heading5">Habilidades</h5>
+				<div class="topic_inner_container">
+					<div class="sub_topic_container">
+						<h6 class="sub_topic heading6">Linguagens</h6>
+						<ul class="tag_list">
+							<li class="tag tag_medium">Typescript</li>
+							<li class="tag tag_medium">Javascript</li>
+							<li class="tag tag_medium">Rust</li>
+							<li class="tag tag_medium">SQL</li>
+						</ul>
+					</div>
+					<div class="sub_topic_container">
+						<h6 class="sub_topic heading6">Tecnologias</h6>
+						<ul class="tag_list">
+							<li class="tag tag_medium">Container (Docker/podman)</li>
+							<li class="tag tag_medium">Postgres</li>
+							<li class="tag tag_medium">NodeJS</li>
+							<li class="tag tag_medium">React JS</li>
+						</ul>
+					</div>
+					<div class="sub_topic_container">
+						<h6 class="sub_topic heading6">Técnicas / Padrões</h6>
+						<ul class="tag_list">
+							<li class="tag tag_medium">Testes</li>
+							<li class="tag tag_medium">DDD (Domain Driven Design)</li>
+							<li class="tag tag_medium">SOLID</li>
+							<li class="tag tag_medium">API REST</li>
+							<li class="tag tag_medium">CI/CD</li>
+							<li class="tag tag_medium">Deployment</li>
+						</ul>
+					</div>
+					<div class="sub_topic_container">
+						<h6 class="sub_topic heading6">Lígua</h6>
+						<ul>
+							<li><strong class="font_weight_bold">Inglês</strong> - Leitura, Escuta, Escrita</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section id="interest" class="topic_container">
+				<h5 class="topic heading5">Interesses</h5>
+				<p class="body2">
+					Tenho interesse pelas linguagens Typescript e Rust no backend. Venho aprendendo cada vez mais sobre
+					arquitetura e sistemas distribuídos para trabalhar com microserviços.
+				</p>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
