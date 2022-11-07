@@ -52,7 +52,7 @@ hr {
 	flex-shrink: 0;
 }
 
-svg {
+svg, img[src$=".svg"], .svg_img {
 	width: 1em;
 	height: 1em;
 	font-size: inherit;

@@ -8,16 +8,16 @@ Tenho grande interesse e gosto de experimentar diferentes tipos de tecnologias d
 
 ## Skills
 
-Estas são minhas habilidades relacionadas a tecnologias (hard skills), vamos conversar ou trabalhar em um projeto juntos que estarei contente em te mostrar minhas soft skills :) :smille:
+Estas são minhas habilidades relacionadas a tecnologias (hard skills), vamos conversar ou trabalhar em um projeto juntos que estarei contente em te mostrar minhas soft skills. 🙂
 
 ### Linguagens
 
-- Typescript :star: :star: :star: :star: :star:
-- Javascript :star: :star: :star: :star: :star:
-- Rust :star: :star: :star: :star:
-- SQL :star: :star: :star:
-- C++ :star:
-- Bash :star:
+- Typescript ⭐⭐⭐⭐⭐
+- Javascript ⭐⭐⭐⭐⭐
+- Rust ⭐⭐⭐⭐
+- SQL ⭐⭐⭐
+- C++ ⭐
+- Bash ⭐
 
 ### Tecnologias
 
@@ -45,8 +45,8 @@ Estas são minhas habilidades relacionadas a tecnologias (hard skills), vamos co
 - Backend
 - Sistemas distribuídos
 
-## Stay in touch
+## Contatos
 
-- LinkedIn: [@ocaiooliveira](linkedin.com/profile/)
-- Medium: [@caio](linkedin.com/profile/)
-- E-mail: caio.vsoliveira23@gmail.com
+- LinkedIn: [@ocaiooliveira](https://www.linkedin.com/in/ocaiooliveira/)
+- Medium: [@caio.olive](https://medium.com/@caio.olive)
+- E-mail: [caio.vsoliveira23@gmail.com](mailto:caio.vsoliveira23@gmail.com)
