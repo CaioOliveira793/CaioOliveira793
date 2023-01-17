@@ -84,7 +84,7 @@
 		main {
 			display: flex;
 			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 1.5);
+			gap: calc(var(--global-spacing-unit) * 2.5);
 		}
 
 		aside {
@@ -95,7 +95,7 @@
 			grid-column: span 4;
 		}
 
-		@media (0px < width < 580px) {
+		@media (0px < width < 840px) {
 			#root {
 				gap: calc(var(--global-spacing-unit) * 2);
 			}
@@ -146,13 +146,13 @@
 		.timeline_list {
 			display: flex;
 			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * .5);
+			gap: calc(var(--global-spacing-unit) * 1.5);
 		}
 
 		.timeline_item {
 			display: flex;
 			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 1);
+			gap: calc(var(--global-spacing-unit) * .5);
 		}
 
 		.timeline_item_container {
@@ -177,6 +177,10 @@
 			gap: calc(var(--global-spacing-unit) * .5);
 		}
 
+		.project_title {
+			font-style: italic;
+		}
+
 
 		.tag_list {
 			display: flex;
@@ -192,7 +196,9 @@
 			background-color: var(--global-bg-emphasis-color);
 		}
 
-	</style>
+
+		.hide { display: none; }
+</style>
 
 	<title>Currículo Caio Oliveira</title>
 </head>
@@ -210,21 +216,22 @@
 			<section id="profile" class="topic_container">
 				<h5 class="topic heading5">Perfil</h5>
 				<p class="body2">
-					Desenvolvedor movido por desafios e pelo prazer de construir tecnologias
-					que nos levam mais longe.
+					Desenvolvedor movido por desafios e pelo prazer de construir tecnologias. Tenho experiência nas
+					linguagens Typescript e Rust desenvolvendo aplicações web como profissional autônomo.
 				</p>
 			</section>
 
 			<section id="personal_info" class="topic_container">
-				<h5 class="topic heading5">Informações pessoais</h5>
-				<div class="personal_information_container">
-					<p class="body2">Nascimento: 23/09/2002</p>
-					<p class="body2">Nacionalidade: Brasileiro</p>
+				<h5 class="topic heading6">Informações pessoais</h5>
+				<div class="personal_information_container body2">
+					<p>Nascimento: 23/09/2002</p>
+					<p>Nacionalidade: Brasileiro</p>
+					<p>Endereço: Rua Pedro Gordilho, 171, Itinga, Lauro de Freitas, Bahia, Brasil.</p>
 				</div>
 			</section>
 
 			<section id="contact" class="topic_container">
-				<h5 class="topic heading5">Contatos</h5>
+				<h5 class="topic heading6">Contatos</h5>
 				<ul class="contact_list_container">
 					<li class="body2">
 						<img src="icon/envelope.svg" alt="icone email" />
@@ -257,9 +264,28 @@
 		</aside>
 
 		<main>
+			<section id="professional_objective" class="topic_container">
+				<h5 class="topic heading5">Objetivo profissional</h5>
+				<p class="body2">
+					<!-- best -->
+					Desejo participar da *Empresa XXX* porque seus desafios estão alinhados com meu objetivo de carreira.
+					Tenho como ambição aprender sobre arquitetura e sistemas distribuídos, atividades na qual gostaria de
+					adquirir experiência e desenvolver soluções com maestria.
+				</p>
+				<p class="body2 hide">
+					<!-- generic -->
+					Tenho interesse pela área de Backend, com ambição aprender sobre arquitetura e sistemas distribuídos
+					para o desenvolvimento de soluções.
+				</p>
+			</section>
+
 			<section id="education" class="topic_container">
 				<h5 class="topic heading5">Educação</h5>
 				<ul class="timeline_list">
+					<li class="timeline_item">
+						<strong class="timeline_item_title subtitle2">Engenharia de Software - Uninter</strong>
+						<p class="timeline_item_time caption">Jan. de 2023 - Em andamento &bull; 4 anos</p>
+					</li>
 					<li class="timeline_item">
 						<strong class="timeline_item_title subtitle2">Ensino médio técnico - CEEP/TIC</strong>
 						<p class="timeline_item_time caption">Jan. de 2017 - Mai. de 2021 &bull; 4 anos 5 meses</p>
@@ -273,19 +299,45 @@
 					<li class="timeline_item">
 						<div class="timeline_item_container">
 							<strong class="timeline_item_title subtitle2">Desenvolvedor fullstack - Autônomo</strong>
-							<p class="timeline_item_time caption">Jul. de 2021 - Atual &bull; 1 ano 5 meses</p>
-							<p class="body2">Desenvolvimento e implantação de sistemas de gestão, páginas de vendas e anúncios.</p>
+							<p class="timeline_item_time caption">Jul. de 2021 - Jan. de 2023 &bull; 1 ano 5 meses</p>
+							<p class="body2">Desenvolvimento e implantação de sistema de gestão.</p>
 						</div>
 						<div class="project_container body2">
-							<p>[Projeto: Sistema de Gestão]</p>
+							<p class="project_title">Projeto: Sistema de Gestão</p>
 							<p>
-								Neste projeto foi desenvolvido um sistema de gestão de crédito consignado para a empresa LF Promotora
-								com objetivo de dar mais produtividade ao setor operacional da empresa.
-								O sistema conta desde a entrada de colaboradores à geração de relatórios de contratos.
+								Neste projeto foi desenvolvido um sistema de gestão para a empresa LF Promotora do ramo de crédito
+								consignado, com objetivo de dar mais produtividade ao setor operacional. A aplicação conta desde a
+								entrada de colaboradores à geração de relatórios de contratos.
 							</p>
 							<p>
-								Tecnologias utilizadas: Possui o backend em NodeJS, com alguns serviços em Rust e React JS no frontend.
+								Tecnologias utilizadas: Backend em NodeJS, com funções Lambdas em Rust e React JS no frontend.
 							</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section id="academic_experience" class="topic_container">
+				<h5 class="topic heading5">Experiências acadêmicas</h5>
+				<ul class="timeline_list">
+					<li class="timeline_item">
+						<div class="timeline_item_container">
+							<strong class="timeline_item_title subtitle2">IoT - Sistema de Irrigação</strong>
+							<p class="timeline_item_time caption">Mar. de 2019 - Dez. de 2019 &bull; 10 meses</p>
+							<p class="body2">
+								Programação e montagem de Sistema de Irrigação sob demanda apresentado na 8ª Feira de Ciências,
+								Empreendedorismo e Inovação da Bahia (FECIBA).
+							</p>
+						</div>
+						<div class="project_container body2">
+							<p class="project_title">Projeto: Sistema de Irrigação</p>
+							<p>
+								Durante o projeto fui responsável pela equipe de montagem e programação junto a turma do 3° ano do
+								ensino médio.
+								Atráves da solução foi notado uma melhor precisão na irrigação e um menor consumo de água, informações
+								aferidas durante o TCC realizado.
+							</p>
+							<p>Tecnologias utilizadas: C++ e Arduino.</p>
 						</div>
 					</li>
 				</ul>
@@ -310,6 +362,7 @@
 							<li class="tag tag_medium">Postgres</li>
 							<li class="tag tag_medium">NodeJS</li>
 							<li class="tag tag_medium">React JS</li>
+							<li class="tag tag_medium">Vue.js</li>
 						</ul>
 					</div>
 					<div class="sub_topic_container">
@@ -326,18 +379,10 @@
 					<div class="sub_topic_container">
 						<h6 class="sub_topic heading6">Língua</h6>
 						<ul>
-							<li><strong class="font_weight_bold">Inglês</strong> - Leitura, Escuta, Escrita</li>
+							<li><strong class="font_weight_bold">Inglês</strong> [INTERMEDIÁRIO] - Escrita, leitura e escuta.</li>
 						</ul>
 					</div>
 				</div>
-			</section>
-
-			<section id="interest" class="topic_container">
-				<h5 class="topic heading5">Interesses</h5>
-				<p class="body2">
-					Tenho interesse pelas linguagens Typescript e Rust no backend. Venho aprendendo cada vez mais sobre
-					arquitetura e sistemas distribuídos.
-				</p>
 			</section>
 		</main>
 	</div>
