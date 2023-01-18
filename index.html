@@ -14,6 +14,8 @@
 	<link rel="stylesheet" href="style/reset.css">
 	<link rel="stylesheet" href="style/typography.css">
 
+	<title>Currículo Caio Oliveira</title>
+
 	<style type="text/css">
 		.header_title_container {
 			display: flex;
@@ -30,6 +32,7 @@
 			display: flex;
 			flex-flow: column nowrap;
 			gap: calc(var(--global-spacing-unit) * 1);
+			width: 100%;
 		}
 
 		.topic {
@@ -39,7 +42,9 @@
 
 		.topic_inner_container {
 			display: flex;
-			flex-flow: column nowrap;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: flex-start;
 			gap: calc(var(--global-spacing-unit) * 2);
 		}
 
@@ -47,77 +52,12 @@
 			display: flex;
 			flex-flow: column nowrap;
 			gap: calc(var(--global-spacing-unit) * 1);
+			min-width: 220px;
+			flex: 1 1;
 		}
 
 		.sub_topic {
 			font-weight: var(--global-font-weight-bold);
-		}
-
-
-		body {
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-			align-items: center;
-		}
-
-		#root {
-			display: grid;
-			grid-template-columns: repeat(6, 1fr);
-			grid-template-rows: auto;
-
-			gap: calc(var(--global-spacing-unit) * 4);
-			margin: calc(var(--global-margin-unit) * 4) calc(var(--global-margin-unit) * 6);
-			max-width: 1200px;
-		}
-
-		header {
-			grid-column: span 6;
-
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: center;
-			align-items: center;
-		}
-
-		aside,
-		main {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 2.5);
-		}
-
-		aside {
-			grid-column: span 2;
-		}
-
-		main {
-			grid-column: span 4;
-		}
-
-		@media (0px < width < 840px) {
-			#root {
-				gap: calc(var(--global-spacing-unit) * 2);
-			}
-
-			header,
-			aside,
-			main {
-				grid-column: span 6;
-			}
-
-			aside {
-				flex-flow: row wrap;
-			}
-
-			#profile {
-				width: 100%;
-			}
-
-			#personal_info,
-			#contact {
-				width: fit-content;
-			}
 		}
 
 
@@ -196,23 +136,80 @@
 			background-color: var(--global-bg-emphasis-color);
 		}
 
+		.skill_justification {
+			font-style: italic;
+		}
 
-		.hide { display: none; }
-</style>
+		.hide {
+			display: none;
+		}
 
-	<title>Currículo Caio Oliveira</title>
+
+		body,
+		#root {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+
+		#root {
+			gap: calc(var(--global-spacing-unit) * 4);
+			margin: calc(var(--global-margin-unit) * 4) calc(var(--global-margin-unit) * 6);
+			max-width: 1200px;
+		}
+
+
+		.profile_container {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			gap: calc(var(--global-spacing-unit) * 2);
+		}
+
+		#profile {
+			min-width: 240px;
+			flex: 3 3;
+		}
+
+		#personal_info {
+			min-width: 200px;
+			flex: 1 1;
+		}
+
+		#contact {
+			min-width: 220px;
+			flex: 1 1;
+		}
+
+		@media (550px < width < 790px) {
+			#profile {
+				width: 100%;
+			}
+		}
+
+		@media print {
+			.page_break {
+				break-before: always;
+			}
+
+			#skill {
+				margin-top: calc(var(--global-spacing-unit) * 1.5);
+			}
+		}
+
+	</style>
 </head>
 
 <body>
 	<div id="root">
-		<header>
-			<div class="header_title_container">
-				<h1 class="heading3">Caio das Virgens Silva Oliveira</h1>
-				<p class="job_title subtitle1">Desenvolvedor back-end</p>
-			</div>
+		<header class="header_title_container">
+			<h1 class="heading3">Caio das Virgens Silva Oliveira</h1>
+			<p class="job_title subtitle1">Desenvolvedor back-end</p>
 		</header>
 
-		<aside>
+		<div class="profile_container">
 			<section id="profile" class="topic_container">
 				<h5 class="topic heading5">Perfil</h5>
 				<p class="body2">
@@ -260,130 +257,130 @@
 					</li>
 				</ul>
 			</section>
-		</aside>
+		</div>
 
-		<main>
-			<section id="professional_objective" class="topic_container">
-				<h5 class="topic heading5">Objetivo profissional</h5>
-				<p class="body2">
-					<!-- best -->
-					Desejo participar da *Empresa XXX* porque seus desafios estão alinhados com meu objetivo de carreira.
-					Tenho como ambição aprender sobre arquitetura e sistemas distribuídos, atividades na qual gostaria de
-					adquirir experiência e desenvolver soluções com maestria.
-				</p>
-				<p class="body2 hide">
-					<!-- generic -->
-					Tenho interesse pela área de Backend, com ambição aprender sobre arquitetura e sistemas distribuídos
-					para o desenvolvimento de soluções.
-				</p>
-			</section>
+		<section id="professional_objective" class="topic_container">
+			<h5 class="topic heading5">Objetivo profissional</h5>
+			<p class="body2">
+				<!-- best -->
+				Desejo participar da *Empresa XXX* porque seus desafios estão alinhados com meu objetivo de carreira.
+				Tenho como ambição aprender sobre arquitetura e sistemas distribuídos, atividades na qual gostaria de
+				adquirir experiência e desenvolver soluções com maestria.
+			</p>
+			<p class="body2 hide">
+				<!-- generic -->
+				Tenho interesse pela área de Backend, com ambição aprender sobre arquitetura e sistemas distribuídos
+				para o desenvolvimento de soluções.
+			</p>
+		</section>
 
-			<section id="education" class="topic_container">
-				<h5 class="topic heading5">Formação</h5>
-				<ul class="timeline_list">
-					<li class="timeline_item">
-						<strong class="timeline_item_title subtitle2">Engenharia de Software - Uninter</strong>
-						<p class="timeline_item_time caption">Jan. de 2023 - Em andamento &bull; 4 anos</p>
-					</li>
-				</ul>
-			</section>
+		<section id="education" class="topic_container">
+			<h5 class="topic heading5">Formação</h5>
+			<ul class="timeline_list">
+				<li class="timeline_item">
+					<strong class="timeline_item_title subtitle2">Engenharia de Software - Uninter</strong>
+					<p class="timeline_item_time caption">Jan. de 2023 - Em andamento &bull; 4 anos</p>
+				</li>
+			</ul>
+		</section>
 
-			<section id="experience" class="topic_container">
-				<h5 class="topic heading5">Experiências</h5>
-				<ul class="timeline_list">
-					<li class="timeline_item">
-						<div class="timeline_item_container">
-							<strong class="timeline_item_title subtitle2">Desenvolvedor fullstack - Autônomo</strong>
-							<p class="timeline_item_time caption">Jul. de 2021 - Jan. de 2023 &bull; 1 ano 5 meses</p>
-							<p class="body2">Desenvolvimento e implantação de sistema de gestão.</p>
-						</div>
-						<div class="project_container body2">
-							<p class="project_title">Projeto: Sistema de Gestão</p>
-							<p>
-								Neste projeto foi desenvolvido um sistema de gestão para a empresa LF Promotora do ramo de crédito
-								consignado, com objetivo de dar mais produtividade ao setor operacional.
-							</p>
-							<p>
-								Tecnologias utilizadas: Backend em NodeJS, com funções Lambdas em Rust e React JS no frontend.
-							</p>
-						</div>
-					</li>
-				</ul>
-			</section>
-
-			<section id="academic_experience" class="topic_container">
-				<h5 class="topic heading5">Experiências acadêmicas</h5>
-				<ul class="timeline_list">
-					<li class="timeline_item">
-						<div class="timeline_item_container">
-							<strong class="timeline_item_title subtitle2">IoT - Sistema de Irrigação</strong>
-							<p class="timeline_item_time caption">Mar. de 2019 - Dez. de 2019 &bull; 10 meses</p>
-							<p class="body2">
-								Programação e montagem de Sistema de Irrigação sob demanda apresentado na 8ª Feira de Ciências,
-								Empreendedorismo e Inovação da Bahia (FECIBA).
-							</p>
-						</div>
-						<div class="project_container body2">
-							<p class="project_title">Projeto: Sistema de Irrigação</p>
-							<p>
-								Responsável pela equipe de montagem e programação junto a turma do 3° ano do ensino médio.
-							</p>
-							<p>Tecnologias utilizadas: C++ e Arduino.</p>
-						</div>
-					</li>
-				</ul>
-			</section>
-
-			<section id="skill" class="topic_container">
-				<h5 class="topic heading5">Habilidades</h5>
-				<div class="topic_inner_container">
-					<div class="sub_topic_container">
-						<h6 class="sub_topic heading6">Linguagens</h6>
-						<ul class="tag_list">
-							<li class="tag tag_medium">Typescript</li>
-							<li class="tag tag_medium">Javascript</li>
-							<li class="tag tag_medium">Rust</li>
-							<li class="tag tag_medium">SQL</li>
-						</ul>
+		<section id="experience" class="topic_container">
+			<h5 class="topic heading5">Experiências</h5>
+			<ul class="timeline_list">
+				<li class="timeline_item">
+					<div class="timeline_item_container">
+						<strong class="timeline_item_title subtitle2">Desenvolvedor fullstack - Autônomo</strong>
+						<p class="timeline_item_time caption">Jul. de 2021 - Jan. de 2023 &bull; 1 ano 5 meses</p>
+						<p class="body2">Desenvolvimento e implantação de sistema de gestão.</p>
 					</div>
-
-					<div class="sub_topic_container">
-						<h6 class="sub_topic heading6">Tecnologias</h6>
-						<ul class="tag_list">
-							<li class="tag tag_medium">Container (Docker/podman)</li>
-							<li class="tag tag_medium">Postgres</li>
-							<li class="tag tag_medium">NodeJS</li>
-							<li class="tag tag_medium">React JS</li>
-							<li class="tag tag_medium">Vue.js</li>
-						</ul>
+					<div class="project_container body2">
+						<p class="project_title">Projeto: Sistema de Gestão</p>
+						<p>
+							Neste projeto foi desenvolvido um sistema de gestão para a empresa LF Promotora do ramo de crédito
+							consignado, com objetivo de dar mais produtividade ao setor operacional.
+						</p>
+						<p>
+							Tecnologias utilizadas: Backend em NodeJS, com funções Lambdas em Rust e React JS no frontend.
+						</p>
 					</div>
+				</li>
+			</ul>
+		</section>
 
-					<div class="sub_topic_container">
-						<h6 class="sub_topic heading6">Técnicas / Padrões</h6>
-						<ul class="tag_list">
-							<li class="tag tag_medium">Testes</li>
-							<li class="tag tag_medium">DDD (Domain Driven Design)</li>
-							<li class="tag tag_medium">SOLID</li>
-							<li class="tag tag_medium">API REST</li>
-							<li class="tag tag_medium">CI/CD</li>
-							<li class="tag tag_medium">Deployment</li>
-						</ul>
+		<section id="academic_experience" class="topic_container">
+			<h5 class="topic heading5">Experiências acadêmicas</h5>
+			<ul class="timeline_list">
+				<li class="timeline_item">
+					<div class="timeline_item_container">
+						<strong class="timeline_item_title subtitle2">IoT - Sistema de Irrigação</strong>
+						<p class="timeline_item_time caption">Mar. de 2019 - Dez. de 2019 &bull; 10 meses</p>
+						<p class="body2">
+							Programação e montagem de Sistema de Irrigação sob demanda apresentado na 8ª Feira de Ciências,
+							Empreendedorismo e Inovação da Bahia (FECIBA).
+						</p>
 					</div>
+					<div class="project_container body2">
+						<p class="project_title">Projeto: Sistema de Irrigação</p>
+						<p>
+							Responsável pela equipe de montagem e programação junto a turma do 3° ano do ensino médio.
+						</p>
+						<p>Tecnologias utilizadas: C++ e Arduino.</p>
+					</div>
+				</li>
+			</ul>
+		</section>
 
-					<div class="sub_topic_container">
-						<h6 class="sub_topic heading6">Língua</h6>
-						<ul class="body2">
-							<li>
-								<strong class="font_weight_bold">Inglês</strong> nível intermediário - Escrita, leitura e escuta.
-							</li>
-							<li>
-								<strong class="font_weight_bold">Portugês</strong> nativo.
-							</li>
-						</ul>
-					</div>
+		<section id="skill" class="topic_container page_break">
+			<h5 class="topic heading5">Habilidades</h5>
+
+			<p class="body2">
+				Habilidades adquiridas através da atuação profissional, conhecimeto literario,
+				desenvolvimento e publicação de bibliotecas.
+			</p>
+
+			<div class="topic_inner_container">
+				<div class="sub_topic_container">
+					<h6 class="sub_topic heading6">Linguagens de programação</h6>
+					<p class="tag_medium">
+						Forte: Typescript, Javascript, Rust, HTML e CSS.
+					</p>
+					<p class="tag_medium">Conhecedor: SQL.</p>
 				</div>
-			</section>
-		</main>
+
+				<div class="sub_topic_container">
+					<h6 class="sub_topic heading6">Tecnologias / Frameworks</h6>
+					<p class="tag_medium">
+						Forte: Node JS, React JS e Nest.
+					</p>
+					<p class="tag_medium">
+						Conhecedor: Docker, podman, Banco de dados Postgres,
+						CI/CD com GitHub Actions, Vue.js.
+					</p>
+				</div>
+
+				<div class="sub_topic_container">
+					<h6 class="sub_topic heading6">Técnicas / Padrões</h6>
+					<p class="tag_medium">
+						Forte: SOLID, API REST.
+					</p>
+					<p class="tag_medium">
+						Conhecedor: Testes automatizados, Domain Driven Design, CI/CD.
+					</p>
+				</div>
+
+				<div class="sub_topic_container">
+					<h6 class="sub_topic heading6">Língua</h6>
+					<ul class="body2">
+						<li>
+							<strong class="font_weight_bold">Inglês</strong> nível intermediário - Escrita, leitura e escuta.
+						</li>
+						<li>
+							<strong class="font_weight_bold">Portugês</strong> nativo.
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
 	</div>
 </body>
 
