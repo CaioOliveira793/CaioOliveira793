@@ -13,199 +13,15 @@
 	<link rel="stylesheet" href="style/token.css">
 	<link rel="stylesheet" href="style/reset.css">
 	<link rel="stylesheet" href="style/typography.css">
+	<link rel="stylesheet" href="style/profile.css">
 
 	<title>Currículo Caio Oliveira</title>
-
-	<style type="text/css">
-		.header_title_container {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 1.5);
-		}
-
-		.job_title {
-			font-weight: var(--global-font-weight-bold);
-			text-transform: uppercase;
-		}
-
-		.topic_container {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 1);
-			width: 100%;
-		}
-
-		.topic {
-			font-weight: var(--global-font-weight-bold);
-			text-transform: capitalize;
-		}
-
-		.topic_inner_container {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-around;
-			align-items: flex-start;
-			gap: calc(var(--global-spacing-unit) * 2);
-		}
-
-		.sub_topic_container {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 1);
-			min-width: 220px;
-			flex: 1 1;
-		}
-
-		.sub_topic {
-			font-weight: var(--global-font-weight-bold);
-		}
-
-
-		.personal_information_container {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * .5);
-		}
-
-		.contact_list_container {
-			display: flex;
-			flex-flow: column wrap;
-			gap: calc(var(--global-spacing-unit) * .5);
-		}
-
-		.contact_list_container li {
-			display: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
-			align-items: center;
-			gap: var(--global-spacing-unit);
-			width: fit-content;
-		}
-
-
-		.timeline_list {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * 1.5);
-		}
-
-		.timeline_item {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * .5);
-		}
-
-		.timeline_item_container {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * .5);
-		}
-
-		.timeline_item_title {
-			font-weight: var(--global-font-weight-bold);
-		}
-
-		.timeline_item_time {
-			text-align: end;
-			color: var(--global-text-disabled-color);
-		}
-
-
-		.project_container {
-			display: flex;
-			flex-flow: column nowrap;
-			gap: calc(var(--global-spacing-unit) * .5);
-		}
-
-		.project_title {
-			font-style: italic;
-		}
-
-
-		.tag_list {
-			display: flex;
-			flex-flow: row wrap;
-			gap: calc(var(--global-spacing-unit) * 1);
-
-			list-style: none;
-		}
-
-		.tag {
-			padding: calc(var(--global-padding-unit) * .5) calc(var(--global-padding-unit) * 1);
-			border-radius: calc(var(--global-border-radius-unit) * 2);
-			background-color: var(--global-bg-emphasis-color);
-		}
-
-		.skill_justification {
-			font-style: italic;
-		}
-
-		.hide {
-			display: none;
-		}
-
-
-		body,
-		#root {
-			display: flex;
-			flex-flow: column nowrap;
-			justify-content: flex-start;
-			align-items: center;
-		}
-
-		#root {
-			gap: calc(var(--global-spacing-unit) * 4);
-			margin: calc(var(--global-margin-unit) * 4) calc(var(--global-margin-unit) * 6);
-			max-width: 1200px;
-		}
-
-
-		.profile_container {
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: flex-start;
-			align-items: flex-start;
-			gap: calc(var(--global-spacing-unit) * 2);
-		}
-
-		#profile {
-			min-width: 240px;
-			flex: 3 3;
-		}
-
-		#personal_info {
-			min-width: 200px;
-			flex: 1 1;
-		}
-
-		#contact {
-			min-width: 220px;
-			flex: 1 1;
-		}
-
-		@media (550px < width < 790px) {
-			#profile {
-				width: 100%;
-			}
-		}
-
-		@media print {
-			.page_break {
-				break-before: always;
-			}
-
-			#skill {
-				margin-top: calc(var(--global-spacing-unit) * 1.5);
-			}
-		}
-
-	</style>
 </head>
 
 <body>
 	<div id="root">
 		<header class="header_title_container">
-			<h1 class="heading3">Caio das Virgens Silva Oliveira</h1>
+			<h1 class="heading1">Caio das Virgens Silva Oliveira</h1>
 			<p class="job_title subtitle1">Desenvolvedor back-end</p>
 		</header>
 
@@ -219,7 +35,7 @@
 			</section>
 
 			<section id="personal_info" class="topic_container">
-				<h5 class="topic heading6">Informações pessoais</h5>
+				<h6 class="topic heading6">Informações pessoais</h6>
 				<div class="personal_information_container body2">
 					<p>Nascimento: 23/09/2002</p>
 					<p>Nacionalidade: Brasileiro</p>
@@ -227,7 +43,7 @@
 			</section>
 
 			<section id="contact" class="topic_container">
-				<h5 class="topic heading6">Contatos</h5>
+				<h6 class="topic heading6">Contatos</h6>
 				<ul class="contact_list_container">
 					<li class="body2">
 						<img src="icon/envelope.svg" alt="icone email" />
@@ -304,18 +120,12 @@
 						</p>
 					</div>
 				</li>
-			</ul>
-		</section>
-
-		<section id="academic_experience" class="topic_container">
-			<h5 class="topic heading5">Experiências acadêmicas</h5>
-			<ul class="timeline_list">
 				<li class="timeline_item">
 					<div class="timeline_item_container">
 						<strong class="timeline_item_title subtitle2">IoT - Sistema de Irrigação</strong>
 						<p class="timeline_item_time caption">Mar. de 2019 - Dez. de 2019 &bull; 10 meses</p>
 						<p class="body2">
-							Programação e montagem de Sistema de Irrigação sob demanda apresentado na 8ª Feira de Ciências,
+							Programação e montagem de Sistema de Irrigação apresentado na 8ª Feira de Ciências,
 							Empreendedorismo e Inovação da Bahia (FECIBA).
 						</p>
 					</div>
@@ -341,41 +151,48 @@
 			<div class="topic_inner_container">
 				<div class="sub_topic_container">
 					<h6 class="sub_topic heading6">Linguagens de programação</h6>
-					<p class="tag_medium">
-						Forte: Typescript, Javascript, Rust, HTML e CSS.
-					</p>
-					<p class="tag_medium">Conhecedor: SQL.</p>
+					<ul class="skill_list caption">
+						<li>Typescript</li>
+						<li>Javascript</li>
+						<li>Rust</li>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>SQL</li>
+					</ul>
 				</div>
 
 				<div class="sub_topic_container">
 					<h6 class="sub_topic heading6">Tecnologias / Frameworks</h6>
-					<p class="tag_medium">
-						Forte: Node JS, React JS e Nest.
-					</p>
-					<p class="tag_medium">
-						Conhecedor: Docker, podman, Banco de dados Postgres,
-						CI/CD com GitHub Actions, Vue.js.
-					</p>
+					<ul class="skill_list caption">
+						<li>Node JS</li>
+						<li>React JS</li>
+						<li>Vue.js</li>
+						<li>Nest.js</li>
+						<li>Docker</li>
+						<li>podman</li>
+						<li>Postgres</li>
+					</ul>
 				</div>
 
 				<div class="sub_topic_container">
 					<h6 class="sub_topic heading6">Técnicas / Padrões</h6>
-					<p class="tag_medium">
-						Forte: SOLID, API REST.
-					</p>
-					<p class="tag_medium">
-						Conhecedor: Testes automatizados, Domain Driven Design, CI/CD.
-					</p>
+					<ul class="skill_list caption">
+						<li>SOLID</li>
+						<li>API REST</li>
+						<li>Testes automatizados</li>
+						<li>Domain Driven Design</li>
+						<li>Continuous Integration</li>
+					</ul>
 				</div>
 
 				<div class="sub_topic_container">
 					<h6 class="sub_topic heading6">Língua</h6>
-					<ul class="body2">
+					<ul class="caption">
 						<li>
-							<strong class="font_weight_bold">Inglês</strong> nível intermediário - Escrita, leitura e escuta.
+							<strong class="font_weight_regular">Inglês</strong> - Intermediário.
 						</li>
 						<li>
-							<strong class="font_weight_bold">Portugês</strong> nativo.
+							<strong class="font_weight_regular">Português</strong> - Nativo.
 						</li>
 					</ul>
 				</div>

@@ -1,5 +1,5 @@
 .heading1 {
-	--heading1-font-size: calc(var(--global-font-size) * 6);
+	--heading1-font-size: calc(var(--global-font-size) * 3.2);
 
 	font-family: var(--global-font-family);
 	font-weight: var(--global-font-weight-light);
@@ -9,7 +9,7 @@
 }
 
 .heading2 {
-	--heading2-font-size: calc(var(--global-font-size) * 3.75);
+	--heading2-font-size: calc(var(--global-font-size) * 2.5);
 
 	font-family: var(--global-font-family);
 	font-weight: var(--global-font-weight-light);
@@ -19,7 +19,7 @@
 }
 
 .heading3 {
-	--heading3-font-size: calc(var(--global-font-size) * 3);
+	--heading3-font-size: calc(var(--global-font-size) * 2);
 
 	font-family: var(--global-font-family);
 	font-weight: var(--global-font-weight-regular);
@@ -29,7 +29,7 @@
 }
 
 .heading4 {
-	--heading4-font-size: calc(var(--global-font-size) * 2);
+	--heading4-font-size: calc(var(--global-font-size) * 1.65);
 
 	font-family: var(--global-font-family);
 	font-weight: var(--global-font-weight-regular);
@@ -39,7 +39,7 @@
 }
 
 .heading5 {
-	--heading5-font-size: calc(var(--global-font-size) * 1.25);
+	--heading5-font-size: calc(var(--global-font-size) * 1.35);
 
 	font-family: var(--global-font-family);
 	font-weight: var(--global-font-weight-regular);
@@ -49,7 +49,7 @@
 }
 
 .heading6 {
-	--heading6-font-size: calc(var(--global-font-size) * 1.15);
+	--heading6-font-size: calc(var(--global-font-size) * 1.1);
 
 	font-family: var(--global-font-family);
 	font-weight: var(--global-font-weight-regular);
